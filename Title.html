@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartPage</title>
+    <style>
+        @font-face {
+            font-family: med;
+            src: url(med.TTF);
+        }
+        @font-face {
+            font-family: cuyabara;
+            src: url(cuyabra.otf);
+        }
+        .drown {
+            font-family: 'cuyabara', sans-serif; 
+            font-size: 40px; 
+            text-align: center;
+            transition: transform 0.6s ease;
+            color: lightcyan;
+        }
+        .drown:hover {
+            transform: translateY(10px);
+        }
+        #playbutton {
+            border: 6px solid white;
+            font-family: 'cuyabara', sans-serif; 
+            font-size: 40px; 
+            border-radius: 10px;
+            width: 100px;
+            height: 50px;
+            color: lightcyan;
+            margin-left: 46.3%;
+            transition: transform 0.6s ease, background-color 2s ease;
+            text-align: center;
+        }
+        #playbutton:hover {
+            transform: translateY(10px);
+            background-color: #2E5894;
+            color: lightblue;
+        }
+        #controls {
+            text-align: center;
+            font-family: 'cuyabara', sans-serif;
+            font-size: 18x;
+            color: lightcyan; 
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body style="background-image: url('Darksky.jpg'); background-position:center;">
+    <div>
+        <p style="font-family: 'med', sans-serif; font-weight: bold; font-size: 150px; text-align: center; color: lightblue; height: 100px;">Bat Blitz</p>
+    </div>
+    <div>
+        <p id="playbutton">PLAY</p>
+    </div>
+    <div>
+        <p class="drown">Controls</p>
+        <p id="controls">Move right = D | Move left = A | Jump = W | Down = S</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.drown').mouseenter(function() {
+        $('#controls').stop(true, true).slideDown(600);
+    }).mouseleave(function() {
+        $('#controls').stop(true, true).slideUp(600);
+    });
+        $('#playbutton').click(function(){
+        window.location.href = 'DifficultySelection.html';
+        });
+        });
+    </script>
+</body>
+</html>

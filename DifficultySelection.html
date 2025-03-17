@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Difficulty</title>
+    <style>
+        @font-face {
+            font-family: med;
+            src: url(med.TTF);
+        }
+        @font-face {
+            font-family: cuyabara;
+            src: url(cuyabra.otf);
+        }
+        h1{
+            font-family: 'med', sans-serif; 
+            font-weight: bold; 
+            font-size: 100px; text-align: 
+            center; color: lightblue;
+            height: 0px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 80vh;
+        }
+        .diff{
+            border: 6px solid white;
+            font-family: 'cuyabara', sans-serif; 
+            font-size: 40px; 
+            border-radius: 10px;
+            width: 200px;
+            height: 50px;
+            color: lightcyan;
+            transition: transform 0.6s ease, background-color 0.8s ease;
+            text-align: center;
+        }
+        .diff:hover{
+            transform: translateY(10px);
+            background-color: #2E5894;
+        }
+        body{
+            background-image: url('Darksky.jpg'); 
+            background-position:center;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Select your Difficulty</h1>
+    <div class="container">
+        <div>
+        <p class="diff" id="easy">Easy</p>
+        </div>
+        <div>
+        <p class="diff" id="med">Medium</p>
+        </div>
+        <div>
+        <p class="diff" id="hard">Hard</p>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+        $('#easy').click(()=> {
+            localStorage.setItem('thd', 'easy');
+            window.location.href = 'CharaSelect.html';
+            });
+
+        $('#med').click(()=> {
+            localStorage.setItem('thd', 'med');
+            window.location.href = 'CharaSelect.html';
+            });
+        $('#hard').click(()=> {
+            localStorage.setItem('thd', 'hard');
+            window.location.href = 'CharaSelect.html';
+            });
+    });
+</script>
+</body>
+
+</html>

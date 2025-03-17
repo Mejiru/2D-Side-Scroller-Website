@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+         @font-face {
+            font-family: med;
+            src: url(med.TTF);
+        }
+        body{
+            background-color: maroon;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        div{
+            display: none;
+        }
+        #gposition{
+            position:absolute;
+            top: 80px;
+            left: 500px;
+        }
+        #retry{
+            position: absolute;
+            top: 350px;
+            left: 630px; 
+            cursor: pointer;
+        }
+        #first{
+            position: absolute;
+            top: 500px;
+            left: 630px;
+            cursor: pointer; 
+        }
+        .colorchange {
+            position: absolute;
+            color: white;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            width: 300px;
+        }
+        #gameover{
+            color: maroon;
+            font-family: 'med';
+            font-size: 100px;
+            height: 50px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Project</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <canvas></canvas>
+    <div id="gposition">
+    <p id="gameover">Game Over</p>
+    </div>
+    <div id="retry"> <p class="colorchange" style="font-size: 40px; font-family: 'med';">Play again </p></div>
+    <div id="first"> <p class="colorchange" style="font-size: 40px; font-family: 'med';">Return to title</p></div>
+    <script src="game.js"> </script>
+</body>
+</html>
